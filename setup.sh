@@ -18,6 +18,9 @@ includeDependencies
 output_file="output.log"
 
 function main() {
+    echo "Performing system update... " >&3
+    sudo apt update && sudo apt upgrade -y
+
     read -rp "Enter the username of the new user account:" username
 
     promptForPassword
